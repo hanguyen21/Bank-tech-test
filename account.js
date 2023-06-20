@@ -44,13 +44,16 @@ class Account {
     //     }); 
     printStatement() {
         let statement = ['date || credit || debit || balance'];
-        this.transaction.forEach(transaction => {
+        this.transaction.reverse().forEach(transaction => {
             let date = transaction.date;
             let credit = transaction.credit ? transaction.credit.toFixed(2) : '' ;
             let debit = transaction.debit ? transaction.debit.toFixed(2) : '' ;
             let balance = transaction.balance.toFixed(2);
             statement.push(`${date} || ${credit} ||${debit}|| ${balance}`);
         });
+        console.log(statement)
+        // return statement;
+        
         return statement.join('\n');
     }
     

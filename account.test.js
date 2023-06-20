@@ -43,17 +43,15 @@ describe('Account class', () => {
     account.deposit(1000);
     account.printStatement();
     expect(account.printStatement()).toContain('date || credit || debit || balance');
-    expect(account.printStatement()).toContain('1000');
-   
-});
+    expect(account.printStatement()).toContain('1000'); 
+   });
 
   it('client can view bank Statement with the balance is a float', () => {
-
     const account = new Account();
     account.deposit(1000);
     expect(account.printStatement()).toContain('date || credit || debit || balance');
     expect(account.printStatement()).toContain('1000.00');
-    
-  });
+   });
+
 
   });
