@@ -24,10 +24,11 @@ describe('Account class', () => {
 
   it('client can make a withdrawal with a date', () => {
     const account = new Account();
-    account.deposit(1000, '10-01-2023');
-    account.withdrawal(500, '14-01-2023');
+    account.deposit(1000);
+    account.withdrawal(500);
     expect(account.bankBalance()).toEqual(500);
-    expect(account.printStatement()).toContain('14-01-2023');
+    expect(account.transaction[1])
+    .toEqual({ date: (new Date()).toLocaleDateString('en-GB'), credit: '', debit: 500, balance: 500 },);
   });
 
 //   it('clients can print their bank statement', () => {

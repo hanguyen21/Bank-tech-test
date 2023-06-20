@@ -17,10 +17,16 @@ class Account {
           console.log(this.transaction);
     }
 
-    withdrawal(amount, date){
+    withdrawal(amount){
         this.balance -= amount;
-        this.transaction.push(amount, date);
-       
+        const withdrawalTransaction = {
+            date: (new Date()).toLocaleDateString('en-GB'),
+            credit: '',
+            debit: amount,
+            balance: this.balance
+          };
+          this.transaction.push(withdrawalTransaction);
+          console.log(this.transaction);
     }
 
     bankBalance(){
