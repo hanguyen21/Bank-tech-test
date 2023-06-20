@@ -5,6 +5,8 @@
 - npm init -y
 - npm add jest
 - npm install -g jest
+- npm install -g jest esbuild
+- npm install jest-environment-jsdom
 
 # Bank tech test
 

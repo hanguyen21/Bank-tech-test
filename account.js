@@ -1,19 +1,28 @@
 class Account {
-    constructor (balance = 0) {
-        this.balance = balance;
+    constructor (balance) {
+        this.balance = 0;
+        this.transaction = [];
 
     }
 
-    deposit(amount){
-        this.balance += amount
+    deposit(amount, date){
+        this.balance += amount;
+        this.transaction.push(amount, date);
     }
 
-    withdrawal(amount){
-        this.balance -= amount
+    withdrawal(amount, date){
+        this.balance -= amount;
+        this.transaction.push(amount, date);
     }
 
     bankBalance(){
         return this.balance
+    }
+
+    printStatement(){
+        console.log(this.transaction);
+        return this.transaction;
+
     }
 }
 
