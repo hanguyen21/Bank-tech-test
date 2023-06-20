@@ -5,14 +5,22 @@ class Account {
 
     }
 
-    deposit(amount, date){
+    deposit(amount){
         this.balance += amount;
-        this.transaction.push(amount, date);
+        const depositTransaction = {
+            date: (new Date()).toLocaleDateString('en-GB'),
+            credit: amount,
+            debit: '',
+            balance: this.balance
+          };
+          this.transaction.push(depositTransaction);
+          console.log(this.transaction);
     }
 
     withdrawal(amount, date){
         this.balance -= amount;
         this.transaction.push(amount, date);
+       
     }
 
     bankBalance(){
@@ -20,8 +28,9 @@ class Account {
     }
 
     printStatement(){
-        console.log(this.transaction);
-        return this.transaction;
+        console.log('date || credit || debit || balance')
+        return this.transaction
+    
 
     }
 }
