@@ -8,7 +8,15 @@
 - npm install -g jest esbuild
 - npm install jest-environment-jsdom
 
-# Bank tech test
+## Run the test
+
+- jest
+
+## Run the code
+
+- node index.js
+
+## Bank tech test
 
 Today, you'll practice doing a tech test.
 
