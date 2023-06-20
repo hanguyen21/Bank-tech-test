@@ -31,17 +31,17 @@ describe('Account class', () => {
     .toEqual({ date: (new Date()).toLocaleDateString('en-GB'), credit: '', debit: 500, balance: 500 },);
   });
 
-//   it('clients can print their bank statement', () => {
-//     const account = new Account();
-//     account.deposit(1000);
-//     expect(account.printStatement()).toContain('date || credit || debit || balance');
-//   });
+  it('clients can print their bank statement', () => {
+    const account = new Account();
+    account.deposit(1000);
+    expect(account.printStatement()).toContain('date || credit || debit || balance');
+  });
 
-//   xit('clients view their bank statement with the balance', () => {
-//     const account = new Account();
-//     account.deposit(1000);
-//     expect(account.printStatement()).toContain('date || credit || debit || balance')
-//     expect(account.printStatement()).toContain(1000);
-//   });
+  it('clients view their bank statement with the balance', () => {
+    const account = new Account();
+    account.deposit(1000);
+    expect(account.printStatement()).toContain('date || credit || debit || balance')
+    expect(account.printStatement()).toContain('1000');
+  });
 
   });

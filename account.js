@@ -14,7 +14,7 @@ class Account {
             balance: this.balance
           };
           this.transaction.push(depositTransaction);
-          console.log(this.transaction);
+        
     }
 
     withdrawal(amount){
@@ -26,7 +26,7 @@ class Account {
             balance: this.balance
           };
           this.transaction.push(withdrawalTransaction);
-          console.log(this.transaction);
+    
     }
 
     bankBalance(){
@@ -34,8 +34,17 @@ class Account {
     }
 
     printStatement(){
-        console.log('date || credit || debit || balance')
-        return this.transaction
+        // console.log('date || credit || debit || balance')
+        const date = this.transaction[0].date
+        const credit = this.transaction[0].credit
+        const debit = this.transaction[0].debit
+        const balance = this.transaction[0].balance 
+
+
+        return `
+        date || credit || debit || balance
+        ${date} || ${credit} ||${debit}|| ${balance} 
+        ` 
     
 
     }
