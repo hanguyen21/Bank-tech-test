@@ -63,3 +63,25 @@ date || credit || debit || balance
 13/01/2023 || 2000.00 || || 3000.00
 10/01/2023 || 1000.00 || || 1000.00
 ```
+
+### My approach
+
+- My JavaScript code models a basic bank account system, applying object-oriented programming (OOP) concepts.
+
+- Object-Oriented Programming (OOP): The Account class is used to create account objects. This class encapsulates the properties and methods related to a bank account. Each account object will have its own balance and transaction history.
+
+- Constructor and Properties: The constructor is a special method that's called when a new object is created. In the Account class, the constructor initializes two properties: balance and transaction. Balance is the current amount of money in the account, initially set to 0. Transaction is an array to store the history of all transactions.
+
+- Methods: There are four main methods in the Account class: deposit, withdrawal, bankBalance, and printStatement.
+
+- deposit: This method takes an amount as an argument and adds it to the balance. It then creates a new transaction object representing the deposit and adds it to the transaction history.
+
+- withdrawal: This method works similarly to the deposit method but it subtracts the amount from the balance instead of adding it. The withdrawal is also recorded in the transaction history.
+
+- bankBalance: This is a simple getter method that returns the current balance of the account.
+
+- printStatement: This method generates and returns a formatted bank statement, including the date, credit amount, debit amount, and balance for each transaction. The transactions are listed in reverse chronological order.
+
+- Modularity and Encapsulation: The Account class is exported as a module at the end of the file, allowing it to be imported and used in other JavaScript files. This promotes modularity and encapsulation in the code.
+
+- Usage: In the index.js file, an Account object is created and used to perform a series of deposits and a withdrawal. Then, a bank statement is generated and logged to the console.
