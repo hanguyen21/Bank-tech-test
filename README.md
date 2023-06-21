@@ -7,7 +7,6 @@
 - npm install -g jest
 - npm install -g jest esbuild
 - npm install jest-environment-jsdom
-- npm install -g eslint
 
 ## Run the test
 
@@ -16,6 +15,20 @@
 ## Run the code
 
 - node index.js
+
+## Install ESLint
+
+- Use 'npm install eslint --global' to install ESLint globally.
+- Go to your project in the terminal and run 'eslint --init' to initiate and setup linting for your project.
+- You can also run this command directly using 'npm init @eslint/config':
+  ✔ How would you like to use ESLint? · style
+  ✔ What type of modules does your project use? · esm
+  ✔ Which framework does your project use? · none
+  ✔ Does your project use TypeScript? · No / Yes
+  ✔ Where does your code run? · browser
+  ✔ How would you like to define a style for your project? · guide
+  ✔ Which style guide do you want to follow? · standard
+  ✔ What format do you want your config file to be in? · JavaScript
 
 ## Bank tech test
 
