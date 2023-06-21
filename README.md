@@ -7,6 +7,7 @@
 - npm install -g jest
 - npm install -g jest esbuild
 - npm install jest-environment-jsdom
+- npm install -g eslint
 
 ## Run the test
 

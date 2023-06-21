@@ -44,6 +44,6 @@ class Account {
         });
        
         return statement.join('\n');
-    }   
+    };   
  };
 module.exports = Account;
