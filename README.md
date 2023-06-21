@@ -85,3 +85,5 @@ date || credit || debit || balance
 - Modularity and Encapsulation: The Account class is exported as a module at the end of the file, allowing it to be imported and used in other JavaScript files. This promotes modularity and encapsulation in the code.
 
 - Usage: In the index.js file, an Account object is created and used to perform a series of deposits and a withdrawal. Then, a bank statement is generated and logged to the console.
+
+  <img width="452" alt="screenshot1" src="https://github.com/hanguyen21/Bank-tech-test/assets/111558835/0da2cb97-6f91-4f45-9deb-2e94daa37473">
